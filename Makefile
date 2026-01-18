@@ -35,6 +35,9 @@ migrate-force: ## Force migration to specific version (usage: make migrate-force
 migrate-create: ## Create new migration (usage: make migrate-create NAME=add_column)
 	@go run cmd/migrate/main.go -command=create -name=$(NAME)
 
+# migrate create manual command optional 
+# migrate create -ext sql -dir migrations -seq create_receipts_table
+
 deps: ## Install dependencies
 	@echo "📦 Installing dependencies..."
 	@go mod download
