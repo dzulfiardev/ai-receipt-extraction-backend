@@ -31,7 +31,7 @@ migrate-version: ## Show current migration version
 
 migrate-force: ## Force migration to specific version (usage: make migrate-force VERSION=1)
 	@go run cmd/migrate/main.go -command=force -version=$(VERSION)
-
+ 
 migrate-create: ## Create new migration (usage: make migrate-create NAME=add_column)
 	@go run cmd/migrate/main.go -command=create -name=$(NAME)
 

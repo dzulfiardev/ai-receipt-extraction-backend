@@ -26,6 +26,7 @@ func NewPostgresDB(cfg Config) (*sql.DB, error) {
 	)
 
 	db, err := sql.Open("postgres", dsn)
+
 	if err != nil {
 		return nil, fmt.Errorf("failed to open database:  %w", err)
 	}
