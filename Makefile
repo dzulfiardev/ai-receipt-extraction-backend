@@ -8,7 +8,7 @@ help:  ## Show this help message
 
 run: ## Run the API server
 	@echo "🚀 Starting API server..."
-	@go run cmd/api/main. go
+	@go run cmd/api/main.go
 
 build: ## Build the API server
 	@echo "🔨 Building API server..."
@@ -16,7 +16,7 @@ build: ## Build the API server
 
 migrate-up: ## Run all pending migrations
 	@echo "🚀 Running migrations..."
-	@go run cmd/migrate/main. go -command=up
+	@go run cmd/migrate/main.go -command=up
 
 migrate-down: ## Rollback last migration
 	@echo "⏪ Rolling back migration..."
@@ -24,7 +24,7 @@ migrate-down: ## Rollback last migration
 
 migrate-drop: ## Drop all tables (DANGER!)
 	@echo "⚠️ Dropping all tables..."
-	@go run cmd/migrate/main. go -command=drop
+	@go run cmd/migrate/main.go -command=drop
 
 migrate-version: ## Show current migration version
 	@go run cmd/migrate/main.go -command=version
