@@ -27,6 +27,7 @@ func JWTMiddleware(jwtSecret string) echo.MiddlewareFunc {
 
 			// Validate token
 			claims, err := utils.ValidateJWT(tokenString, jwtSecret)
+
 			if err != nil {
 				return utils.ErrorResponse(c, 401, "Invalid or expired token")
 			}
